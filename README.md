@@ -6,10 +6,6 @@
 3. **Tasks**
    - Data Ingestion
    - MapReduce Programming
-4. **Evaluation Rubric**
-5. **Final Submission**
-6. **Optional Sessions**
-
 ---
 
 ## Introduction
@@ -35,6 +31,8 @@ CSV files (each several GB) for Jan–Jun 2017:
 
 **Data Dictionary**  
 Refer to the [NYC TLC Yellow Taxi data dictionary](https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf) for detailed field definitions.
+
+> **Note:** For initial testing using 2 month's CSV to develop, debug, and validate your ingestion and MapReduce code before running on all files as the files are very large.
 
 ---
 
@@ -130,14 +128,14 @@ hadoop fs -put yellow_tripdata_2017-01.csv /user/hadoop/yellow
 # Repeat for other CSVs
 ```
 
-| Script                 | Description                                                                 |
-|------------------------|-----------------------------------------------------------------------------|
-| `vendor_revenue.py`    | Vendor with most trips & total revenue                                      |
-| `pickup_revenue.py`    | Pickup location with highest total revenue                                  |
-| `payment_types.py`     | Payment type counts, sorted descending                                      |
-| `avg_trip_time.py`     | Average trip duration per pickup location                                   |
-| `tip_ratio.py`         | Average tip/revenue ratio per pickup location (sorted)                      |
-| `time_variation.py`    | Avg trip revenue by month, hour (day vs night), and day of week (wknd vs wd)|
+| Script           | Description                                                                 |
+|------------------|-----------------------------------------------------------------------------|
+| `mrtask_a.py`    | Vendor with most trips & total revenue                                      |
+| `mrtask_b.py`    | Pickup location with highest total revenue                                  |
+| `mrtask_c.py`    | Payment type counts, sorted descending                                      |
+| `mrtask_d.py`    | Average trip duration per pickup location                                   |
+| `mrtask_e.py`    | Average tip/revenue ratio per pickup location (sorted)                      |
+| `mrtask_f.py`    | Avg trip revenue by month, hour (day vs night), and day of week (wknd vs wd)|
 
 **Example:**
 ```bash
